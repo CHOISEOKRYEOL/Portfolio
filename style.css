@@ -36,6 +36,7 @@
 
 
 /* Universal tags */
+
 * {
     box-sizing: border-box;
 }
@@ -98,6 +99,7 @@ p {
 }
 
 /* Navbar */
+
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -145,6 +147,7 @@ p {
 }
 
 /* Home */
+
 #home {
     background: url('/imgs/background1.png') center/cover no-repeat;
     padding: 40px;
@@ -174,14 +177,20 @@ p {
 }
 
 /* Section common */
+
 .section {
     text-align: center;
     padding: 50px;
+    margin: auto;
+}
+
+.section__container {
     max-width: 1200px;
     margin: auto;
 }
 
 /* About */
+
 .about__majors {
     display: flex;
     justify-content: space-between;
@@ -246,6 +255,64 @@ p {
 .job__period {
     font-size: var(--font-micro);
 }
+
+/* Skill */
+
+#skills {
+    background-color: var(--color-yellow);
+}
+
+.skillset {
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white);
+    margin: 20px 0;
+}
+
+.skillset__title {
+    color: var(--color-white);
+    margin: 0;
+}
+
+.skillset__left {
+    flex-basis: 60%; /* flex 아이템의 초기 크기를 지정한다 */
+    background-color: var(--color-dark-grey);
+    padding: 20px 40px;
+}
+
+.skill_description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill {
+    margin-bottom: 32px;
+}
+
+.skill__bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+
+.skill__value {
+    height: 3px;
+    background-color: var(--color-orange);
+}
+
+.skillset__right {
+    flex-basis: 40%;
+}
+
+.tools {
+    background-color: var(--color-grey);
+}
+
+.tools, .etc {
+    padding: 20px;
+}
+
+
 
 
 
