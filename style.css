@@ -133,7 +133,6 @@ p {
 
 .navbar__menu {
     display: flex;
-
 }
 
 .navber__menu__item {
@@ -150,6 +149,15 @@ p {
 .navber__menu__item:hover {
     background-color: var(--color-dark-pink);
     border-radius: var(--size-border-radius);
+}
+
+.navbar__toggle__btn {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;
 }
 
 /* Home */
@@ -488,6 +496,52 @@ p {
     color: var(--color-yellow);
     transition: all var(--animation-duration) ease-in;
 }
+
+/* For below 768 screen width */
+@media screen and (max-width: 768px) {
+    .navbar__toggle__btn {
+        display: block;
+    }
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .about__majors {
+        flex-direction: column;
+    }
+
+    .major {
+        margin-bottom: 38px;
+    }
+
+    .major__icon {
+        margin: auto;
+    }
+
+    .skillset {
+        flex-direction: column;
+    }
+
+    .project {
+        flex-grow: 1; /* 남은 레이아웃 영역을 채울 수 있다*/
+    }
+
+    .testimonial__avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+
+}
+
 
 
 
