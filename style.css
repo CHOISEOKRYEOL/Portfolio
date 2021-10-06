@@ -1,6 +1,8 @@
 /* Global */
+
 :root {
     /* Color */
+
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
@@ -16,6 +18,7 @@
     --color-black: #000000;
 
     /* Font size */
+
     --font-large: 48px;
     --font-medium: 28px;
     --font-regular: 18px;
@@ -23,14 +26,17 @@
     --font-micro: 14px;
 
     /* Font weight */
+
     --weight-bold: 700;
     --weight-semi-bold: 600;
     --weight-regular: 400;
 
     /* Size */
+
     --size-border-radius: 4px;
 
     /* Animation */
+
     --animation-duration: 300ms; /* 애니메이션 시간은 250~350ms가 표준 */
 }
 
@@ -271,7 +277,6 @@ p {
 
 .skillset__title {
     color: var(--color-white);
-    margin: 0;
 }
 
 .skillset__left {
@@ -310,6 +315,106 @@ p {
 
 .tools, .etc {
     padding: 20px;
+}
+
+/* Work */
+
+.work__categories {
+    margin: 40px;
+}
+
+.category__btn {
+    border: 1px solid var(--color-dark-white);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count{
+    opacity: 1;
+    top: 0;
+}
+
+.category__count {
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    /* blcok: 기본적으로 width:100%이고 width와height값을 지정 할 수 있다.*/
+    /* inline: 주로 텍스트를 주입할 때 사용 되고, width:100% 가 아닌 컨텐츠 영역만큼 자동으로 크기가 잡힌다. width와 height를 명시 할 수 없다. */
+    /* inline-block: inline 특징과 block 특징을 모두 가진 요소이며 width와 height를 지정 할 수 있다 */
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0;
+    transition: all var(--animation-duration);
+}
+    
+.work__projects {
+    display: flex;
+    flex-wrap: wrap; /* 한자리에 차지 않으면 밑으로 떨어질수 있게 한다 */
+    justify-content: center;
+}
+
+.project {
+    position: relative; /* 자시 자신을 기준을 top, right, bottom, left를 적용 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+    background-color: var(--color-light-white);
+}
+
+.project__img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.project__description {
+    position: absolute;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--animation-duration) ease-in;
+}
+
+.project:hover .project__description {
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+
+.project__description h3 {
+    color: var(--color-white);
+}
+
+.project__description h3::after {
+    content: '';
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 25px;
+    height: 2px;
+    margin-left: -12px;
+    background-color: var(--color-dark-white);
+    margin-top: 8px;
 }
 
 
