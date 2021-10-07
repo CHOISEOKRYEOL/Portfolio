@@ -202,12 +202,12 @@ p {
 }
 
 .home__contact {
-    color: var(--color-white);
+    color: var(--color-blue);
     font-size: var(--font-regular);
     font-weight: var(--weight-bold);
     margin: 24px;
     padding: 8px 12px;
-    border: 2px solid var(--color-white);
+    border: 2px solid var(--color-blue);
     border-radius: var(--size-border-radius);
 }
 
