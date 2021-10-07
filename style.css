@@ -523,6 +523,27 @@ p {
     transition: all var(--animation-duration) ease-in;
 }
 
+/* Scroll */
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    color: var(--color-white);
+    background-color: var(--color-cyan);
+    border-radius: 50%;
+    opacity: 0;  /* diplay:none 같이 없어졌다가 나타나는것이면 애니메이션이 되지 않는다 */
+    pointer-events: none; /* 클릭이 안되게 지정할 수 있다(마우스를 올려놓으면 pointer 모양도 없앨 수 있다 */
+    transition: opacity var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto; /* arrow-up button이 보일시 클릭 할 수 있게 한다 */
+}
+
 /* For below 768 screen width */
 @media screen and (max-width: 768px) {
     .navbar__toggle__btn {
