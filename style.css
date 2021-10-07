@@ -117,6 +117,7 @@ p {
     color: var(--color-blue);
     padding: 16px;
     transition: all var(--animation-duration) ease-in-out;
+    z-index: 1; /* navbar를 가장 위에 표시 */
 }
 
 #navbar.navbar--dark {
