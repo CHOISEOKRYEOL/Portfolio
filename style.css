@@ -580,7 +580,7 @@ p {
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--color-cyan);
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 #navbar a {
