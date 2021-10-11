@@ -158,7 +158,7 @@ window.addEventListener('wheel', () => {
     } else if (
         Math.round(window.scrollY + window.innerHeight) >= 
         document.body.clientHeight) {
-        selectedNavIndex = navItems.length - 1;
+            selectedNavIndex = navItems.length - 1;
     } 
     selectNavItem(navItems[selectedNavIndex]);
 });
