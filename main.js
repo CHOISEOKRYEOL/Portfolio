@@ -11,7 +11,6 @@ document.addEventListener('scroll', () => {
     }
 });
 
-
 //  Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
@@ -85,7 +84,6 @@ workBtnContainer.addEventListener('click', (event) => {
 
     projectContainer.classList.add('anim-out');
 
-
     setTimeout(() => {
         projects.forEach((project) => {
             if(filter === '*' || filter === project.dataset.type) {
@@ -109,9 +107,7 @@ const sectionIds = [
     '#contact'
 ];
 const sections = sectionIds.map(id => document.querySelector(id));
-const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`))
-console.log(sections);
-console.log(navItems);
+const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
 
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다
 let selectedNavIndex;
@@ -129,13 +125,18 @@ function scrollIntoView(selector) {
 };
 
 const observerOptions = {
-    root: null,
-    rootMargin: '0px',
+    root: null, // default: view => 어떤 걸 기준으로 요소들이 들어오고 나가는지를 확인하고 싶을 때 그 부모 컨테이너를 지정해 줄 수 있다
+    rootMargin: '0px', // 부모의 영역을 넓힐 수 있다
     threshold: 0.3
+    // 얼마만큼 보여져야 콜백함수가 호출될지를 결정 (0 ~ 1)
+    // threshold가 1로 설정 돼있으면 들어오때는 1값을 나갈때는 0값으로 설정된다
 };
 
 const observerCallback = (entries, observer) => {
+    // entry: 요소의 정보가 들어있다
     entries.forEach(entry => {
+        // intersectionRatio: 얼마만큼 들어와있는지 확인 할 수 있다 안에 전부 다 들어와 있다면 1
+        // isIntersecting: 요소가 안으로 들어오는 상태라면 true, window에 있다가 밖으로 나가는 상태라면 false
         if(!entry.isIntersecting && entry.intersectionRatio > 0) {
             const index = sectionIds.indexOf(`#${entry.target.id}`);
             // 스크롤링이 아래로 되어서 페이지가 올라옴
