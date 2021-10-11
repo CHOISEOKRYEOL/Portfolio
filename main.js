@@ -116,7 +116,7 @@ function selectNavItem(selected) {
     selectedNavItem.classList.remove('active');
     selectedNavItem = selected;
     selectedNavItem.classList.add('active');
-}
+};
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
