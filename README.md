@@ -13,7 +13,7 @@ document.addEventListener('scroll', () => {
 });
 ```
 
-<img src="./imgs/Portfoliodarknavbar.png" width="200px" height="200px" alt="navbar"></img><br/>
+![image description](./imgs/Portfoliodarknavbar.png)
 
  ```JavaScript
 //  메뉴 버튼을 누를시 해당 페이지로 이동 할 수 있는 기능
@@ -47,7 +47,7 @@ function selectNavItem(selected) {
 };
 ```
 
-![image description width="450px" height="300px"](./imgs/movescrolling.png)
+![image description](./imgs/movescrolling.png)
 ***
 
 ```JavaScript
@@ -58,5 +58,5 @@ navbarToggleBtn.addEventListener('click', () => {
 });
 ```
 
-![image width="100px" height="100px"](./imgs/toggle.png)
+![image description](./imgs/toggle.png)
 ***
