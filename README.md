@@ -11,9 +11,11 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('navbar--dark');
     }
 });
+
 ```
 
-![image description](./imgs/Portfoliodarknavbar.png)
+![image description](./imgs/readme/Portfoliodarknavbar.png)
+***
 
  ```JavaScript
 //  메뉴 버튼을 누를시 해당 페이지로 이동 할 수 있는 기능
@@ -37,6 +39,12 @@ function scrollIntoView(selector) {
     selectNavItem(navItems[sectionIds.indexOf(selector)]);
 };
 
+// Home페이지에 Contact me 클릭시 Contact 페이지로 이동
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', (event) => {
+    scrollIntoView('#contact');
+});
+
 // 선택된 메뉴에 ㅁ 표시가 유지된다
 let selectedNavIndex;
 let selectedNavItem = navItems[0];
@@ -45,9 +53,10 @@ function selectNavItem(selected) {
     selectedNavItem = selected;
     selectedNavItem.classList.add('active');
 };
+
 ```
 
-![image description](./imgs/movescrolling.png)
+![image description](./imgs/readme/movescrolling.png)
 ***
 
 ```JavaScript
@@ -56,7 +65,21 @@ const navbarToggleBtn = document.querySelector('.navbar__toggle__btn');
 navbarToggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
 });
+
 ```
 
-![image description](./imgs/toggle.png)
+![image description](./imgs/readme/toggle.png)
+***
+
+```JavaScript
+// 창이 아래로 스크롤될 때 Home페이지가 천천히 투명
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+```
+
+![image description](./imgs/readme/homeopacity.png)
 ***
