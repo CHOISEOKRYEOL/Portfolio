@@ -14,7 +14,7 @@ document.addEventListener('scroll', () => {
 ```
 
 ![image description](./imgs/Portfoliodarknavbar.png)
----
+- - -
 
  ```JavaScript
 //  메뉴 버튼을 누를시 해당 페이지로 이동 할 수 있는 기능
