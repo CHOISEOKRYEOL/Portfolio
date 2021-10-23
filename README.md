@@ -59,5 +59,5 @@ navbarToggleBtn.addEventListener('click', () => {
 });
 ```
 
-![image description](./imgs/toggle.png)
+![image description width="450px" height="300px"](./imgs/toggle.png)
 ***
