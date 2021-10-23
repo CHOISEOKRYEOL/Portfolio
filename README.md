@@ -14,3 +14,7 @@ document.addEventListener('scroll', () => {
 });
 </code>
 </pre>
+
+![image description](./img/Portfolio - darknavbar.png);
+ 
+ ---
