@@ -186,5 +186,5 @@ window.addEventListener('wheel', () => {
 
 ```
 
-![image description](./imgs/readme/projectani.png)
+![image description](./imgs/readme/scroll.png)
 ***
