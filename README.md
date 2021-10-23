@@ -12,7 +12,7 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('navbar--dark');
     }
 });
- ![image description](./img/Portfolio - darknavbar.png);
 </code>
 </pre>
+![image description](./img/Portfoliodarknavbar.png)
  ---
