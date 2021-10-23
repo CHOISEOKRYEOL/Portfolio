@@ -83,3 +83,24 @@ document.addEventListener('scroll', () => {
 
 ![image description](./imgs/readme/homeopacity.png)
 ***
+
+```JavaScript
+// 오른쪽 아래에 위치한 arrow-up 버튼을 Home페이지 반이상 내려갈을때 표시
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+});
+
+// arrow-up 버틀 클릭시 Home 페이지로 이동
+arrowUp.addEventListener('click', (event) => {
+    scrollIntoView('#home');
+});
+
+```
+
+![image description](./imgs/readme/arrowup.png)
+***
