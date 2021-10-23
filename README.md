@@ -104,3 +104,41 @@ arrowUp.addEventListener('click', (event) => {
 
 ![image description](./imgs/readme/arrowup.png)
 ***
+
+```JavaScript
+// 프로젝트를 각자 카테고리에 분리 (HTML, CSS, JavaScript)
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (event) => {
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    if(filter == null) {
+        return;
+    }
+
+    // project에 애니메이션을 추가하고 애니메이션을 클릭해도 선택이 가능
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = event.target.nodeName === "BUTTON" ? event.target :
+                    event.target.parentNode;
+    target.classList.add('selected');
+
+    projectContainer.classList.add('anim-out');
+
+    setTimeout(() => {
+        projects.forEach((project) => {
+            if(filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    }, 300)
+
+});
+
+```
+
+![image description](./imgs/readme/projectani.png)
+***
