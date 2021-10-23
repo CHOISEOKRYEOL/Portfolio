@@ -13,7 +13,7 @@ document.addEventListener('scroll', () => {
 });
 ```
 
-<img src="./imgs/Portfoliodarknavbar.png" width="50px" height="50px" alt="navbar"></img><br/>
+<img src="./imgs/Portfoliodarknavbar.png" width="200px" height="200px" alt="navbar"></img><br/>
 
  ```JavaScript
 //  메뉴 버튼을 누를시 해당 페이지로 이동 할 수 있는 기능
