@@ -1,7 +1,6 @@
 # Portfolio
 
-<pre>
-<code>
+```JavaScript
 // 스크롤을 내릴시 navbar에 어두운 색 navbar가 생성
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -12,7 +11,7 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('navbar--dark');
     }
 });
-</code>
-</pre>
-![image description](./img/Portfoliodarknavbar.png)
+```
+
+![image description](./imgs/Portfoliodarknavbar.png)
  ---
