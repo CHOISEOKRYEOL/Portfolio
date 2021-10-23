@@ -144,7 +144,7 @@ workBtnContainer.addEventListener('click', (event) => {
 ***
 
 ```JavaScript
-// 스크롤을 내리면 해당 페이지에 맞게 메뉴 section에 ㅁ 표시
+// 스크롤을 내리면 해당 페이지에 맞게 메뉴 section에 ㅁ표시
 const sectionIds = [
     '#home',
     '#about', 
