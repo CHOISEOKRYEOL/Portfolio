@@ -48,7 +48,7 @@ function selectNavItem(selected) {
 };
 ```
 
-![image description](./imgs/movescrolling.png)
+![image description width="450px" height="300px"](./imgs/movescrolling.png)
 ***
 
 ```JavaScript
