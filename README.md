@@ -142,3 +142,49 @@ workBtnContainer.addEventListener('click', (event) => {
 
 ![image description](./imgs/readme/projectani.png)
 ***
+
+```JavaScript
+// 스크롤을 내리면 해당 페이지에 맞게 메뉴 section에 ㅁ 표시
+const sectionIds = [
+    '#home',
+    '#about', 
+    '#skills', 
+    '#work', 
+    '#testimonials', 
+    '#contact'
+];
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
+
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting && entry.intersectionRatio > 0) {
+            const index = sectionIds.indexOf(`#${entry.target.id}`);
+            if(entry.boundingClientRect.y < 0) {
+                selectedNavIndex = index + 1;
+            } else {
+                selectedNavIndex = index - 1;
+            }
+        }
+    });
+};
+// 화면에 들어오는 section과 나가는 section을 관찰하는 역할
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => observer.observe(section));
+
+// 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다
+window.addEventListener('wheel', () => {
+    if(window.scrollY === 0) {
+        selectedNavIndex = 0;
+    } else if (
+        Math.round(window.scrollY + window.innerHeight) >= 
+        document.body.clientHeight) {
+            selectedNavIndex = navItems.length - 1;
+    } 
+    selectNavItem(navItems[selectedNavIndex]);
+});
+
+```
+
+![image description](./imgs/readme/projectani.png)
+***
