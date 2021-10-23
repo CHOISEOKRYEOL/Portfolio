@@ -13,7 +13,7 @@ document.addEventListener('scroll', () => {
 });
 ```
 
-![image description](./imgs/Portfoliodarknavbar.png)
+![image description width="450px" height="300px"](./imgs/Portfoliodarknavbar.png)
 ***
 
  ```JavaScript
