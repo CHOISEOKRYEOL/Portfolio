@@ -49,4 +49,15 @@ function selectNavItem(selected) {
 ```
 
 ![image description](./imgs/movescrolling.png)
-- - -
+***
+
+```JavaScript
+// 반응형 웹에서 토글 버튼 클릭시 메뉴창 생성
+const navbarToggleBtn = document.querySelector('.navbar__toggle__btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+```
+
+![image description](./imgs/toggle.png)
+***
