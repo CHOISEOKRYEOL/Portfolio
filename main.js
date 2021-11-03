@@ -2,6 +2,7 @@
 
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
+// getBoundingClientRect: DOMReact요소의 크기와 뷰포트에 상대적인 위치에 대한 정보를 제공하는 객체를 반환
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     if(window.scrollY > navbarHeight) {
@@ -135,7 +136,7 @@ const observerOptions = {
 const observerCallback = (entries, observer) => {
     // entry: 요소의 정보가 들어있다
     entries.forEach(entry => {
-        // intersectionRatio: 얼마만큼 들어와있는지 확인 할 수 있다 안에 전부 다 들어와 있다면 1
+        // intersectionRatio: 얼마만큼 들어와있는지 확인 할 수 있다. 안에 전부 다 들어와 있다면 1
         // isIntersecting: 요소가 안으로 들어오는 상태라면 true, window에 있다가 밖으로 나가는 상태라면 false
         if(!entry.isIntersecting && entry.intersectionRatio > 0) {
             const index = sectionIds.indexOf(`#${entry.target.id}`);
@@ -148,6 +149,7 @@ const observerCallback = (entries, observer) => {
         }
     });
 };
+// observerOptions: 타겟요소와 상위 요소 또는 최상위 document의 viewport 사이의 intersection내의 변화를 비동기적으로 관찰
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
 
