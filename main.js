@@ -126,7 +126,9 @@ function scrollIntoView(selector) {
 };
 
 const observerOptions = {
-    root: null, // default: view => 어떤 걸 기준으로 요소들이 들어오고 나가는지를 확인하고 싶을 때 그 부모 컨테이너를 지정해 줄 수 있다
+    // default: view(window창) => 어떤 걸 기준으로 요소들이 들어오고 나가는지를 확인하고 싶을 때 그 부모 컨테이너를 지정해 줄 수 있다
+    // ex: document.querySelector('.container') => 컨테이너에 들어왔을때 콜백함수 실행
+    root: null, 
     rootMargin: '0px', // 부모의 영역을 넓힐 수 있다
     threshold: 0.3
     // 얼마만큼 보여져야 콜백함수가 호출될지를 결정 (0 ~ 1)
