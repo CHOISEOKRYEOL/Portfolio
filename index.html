@@ -9,21 +9,21 @@
     <meta name="author" content="Choi">
     <link rel="icon" type="image/png" href="imgs/favicon-removebg-preview.png">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-    </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="./main.js" async></script>
+    
 </head>
 <body>
+
+    <div class="mouse"></div>
     
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <img src="./imgs/favicon__3_-removebg-preview.png">
-            <a href="">SeokRyeol</a>
+            <a href="#" class="none">SeokRyeol</a>
         </div>
-        <div class="navbar__box">
+        <div class="navbar__box none">
             <ul class="navbar__menu">
                 <li class="navber__menu__item active" data-link="#home">Home</li>
                 <li class="navber__menu__item" data-link="#about">About</li>
@@ -43,51 +43,43 @@
     <!-- Home -->
     <section id="home">
         <div class="home__container">
-            <img 
-            src="./imgs/취업사진.jpg" 
-            alt="Choi's profile photo" 
-            class="home__avatar"
-        />
-        <h1 class="home__title">Hello, <br/> I'm Dream Coder</h1>
-        <h2 class="home__description">Front-end와 Back-end를 넘나드는것을 꿈꾸는 개발자</h2>
-        <button class="home__contact" data-link="#contact">Contact Me</button>
+            <div class="home__container img">
+                <img 
+                src="./imgs/취업사진.jpg" 
+                alt="Choi's profile photo" 
+                class="home__avatar"
+                />
+            </div>
+            <div class="home__container Text">
+                <h1 class="home__title none">Hello, <br/> I'm Dream Coder</h1>
+                <h2 class="home__description none">Front-end와 Back-end를 넘나드는것을 꿈꾸는 개발자</h2>
+            </div>
+            <button class="home__contact none" data-link="#contact">Contact Me</button>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="section__container">
-        <h1>About me</h1>
-        <p>나에 대한 글 쓰기</p>
-        <div class="about__majors">
-            <div class="major">
+    <section id="about" class="section__container none">
+        <h1 class="main__title">About me</h1>
+            <div class="major1">
                 <div class="major__icon">
                     <i class="fab fa-html5"></i>
                 </div>
-                <h2 class="major__title">HTML</h2>
-                <div class="major__description">
-                    HTML
-                </div>
+                <span class="major__title h">HTML</span>
             </div>
-            <div class="major">
+            <div class="major2">
                 <div class="major__icon">
                     <i class="fab fa-css3-alt"></i>
                 </div>
-                <h2 class="major__title">CSS</h2>
-                <div class="major__description">
-                    CSS
-                </div>
+                <span class="major__title c">CSS</span>
             </div>
-            <div class="major">
+            <div class="major3">
                 <div class="major__icon">
                     <i class="fab fa-js-square"></i>
                 </div>
-                <h2 class="major__title">JavaScript</h2>
-                <div class="major__description">
-                    JavaScript
-                </div>
+                <span class="major__title j">JavaScript</span>
             </div>
-        </div>
-        <div class="about__jobs">
+        <div class="about__jobs none">
             <div class="job">
                 <img src="./imgs/jobs/bitcamp.png" alt="bitcamp" class="jab__logo">
                 <div class="job_description">
@@ -98,190 +90,196 @@
         </div>
     </section>
     <!-- Skills -->
-    <section id="skills" class="section">
-        <div class="section__container">
-            <h1>Skills</h1>
-            <h2>Skills & Attributes</h2>
-            <p>
-                내가 배우고 싶은거 그리고 배움에 열정이 있다는거 팀 환경에서 일해본 경험, 혼자서도 일을 할수 있고<br/>
-                스트레스가 있어도 충분히 적응할 수 있다 등등
-            </p>
-            <div class="skillset">
-                <div class="skillset__left">
-                    <h3 class="skillset__title">Skills</h3>
-                    <div class="skill">
-                        <div class="skill_description">
-                            <span>HTML</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill_description">
-                            <span>CSS</span>
-                            <span>65%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 65%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill_description">
-                            <span>JavaScript</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 50%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill_description">
-                            <span>Java</span>
-                            <span>30%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 30%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill_description">
-                            <span>MYSQL</span>
-                            <span>30%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 30%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skillset__right">
-                    <div class="tools">
-                        <h3 class="skillset__title">Tools</h3>
-                        <ul class="tools_list">
-                            <li><span>Visual Studio Code</span></li>
-                            <li><span>MYSQL</span></li>
-                            <li><span>Eclips</span></li>
-                        </ul>
-                    </div>
-                    <div class="etc">
-                        <h3 class="skillset__title">Etc</h3>
-                        <ul class="etc__list">
-                            <li><span>Git</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
+    <section id="skills" class="section none">
+            <ul class="progress">
+        <!--  Item  -->
+            <li data-name="HTML5 Skill" data-percent="80%">
+                <svg viewBox="-10 -10 220 220">
+                <g fill="none" stroke-width="12" transform="translate(100,100)">
+                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
+                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
+                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
+                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
+                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
+                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
+                </g>
+                </svg>
+                <svg viewBox="-10 -10 220 220">
+                <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="547"></path>
+                </svg>
+            </li>
+            <!--  Item  -->
+            <li data-name="CSS Skill" data-percent="80%">
+                <svg viewBox="-10 -10 220 220">
+                <g fill="none" stroke-width="12" transform="translate(100,100)">
+                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
+                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
+                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
+                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
+                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
+                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
+                </g>
+                </svg>
+                <svg viewBox="-10 -10 220 220">
+                <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="547"></path>
+                </svg>
+            </li>
+            <!--  Item  -->
+            <li data-name="Javascript Skill" data-percent="70%">
+                <svg viewBox="-10 -10 220 220">
+                <g fill="none" stroke-width="12" transform="translate(100,100)">
+                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
+                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
+                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
+                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
+                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
+                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
+                </g>
+                </svg>
+                <svg viewBox="-10 -10 220 220">
+                <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="480"></path>
+                </svg>
+            </li>
+            <!--  Item  -->
+            <li data-name="jQuery" data-percent="60%">
+                <svg viewBox="-10 -10 220 220">
+                <g fill="none" stroke-width="12" transform="translate(100,100)">
+                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
+                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
+                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
+                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
+                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
+                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
+                </g>
+                </svg>
+                <svg viewBox="-10 -10 220 220">
+                <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="430"></path>
+                </svg>
+            </li>
+            <!--  Item  -->
+            <li data-name="Java" data-percent="30%">
+                <svg viewBox="-10 -10 220 220">
+                <g fill="none" stroke-width="12" transform="translate(100,100)">
+                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
+                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
+                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
+                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
+                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
+                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
+                </g>
+                </svg>
+                <svg viewBox="-10 -10 220 220">
+                <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="100"></path>
+                </svg>
+            </li>
+            <!--  Item  -->
+            <li data-name="MySql" data-percent="30%">
+                <svg viewBox="-10 -10 220 220">
+                <g fill="none" stroke-width="12" transform="translate(100,100)">
+                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
+                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
+                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#cl3)"/>
+                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cl4)"/>
+                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#cl5)"/>
+                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#cl6)"/>
+                </g>
+                </svg>
+                <svg viewBox="-10 -10 220 220">
+                <path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="100"></path>
+                </svg>
+            </li>
+        </ul>
+    <!--  Defining Angle Gradient Colors  -->
+        <svg width="0" height="0">
+        <defs>
+        <linearGradient id="cl1" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#618099"/>
+            <stop offset="100%" stop-color="#8e6677"/>
+        </linearGradient>
+        <linearGradient id="cl2" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+            <stop stop-color="#8e6677"/>
+            <stop offset="100%" stop-color="#9b5e67"/>
+        </linearGradient>
+        <linearGradient id="cl3" gradientUnits="objectBoundingBox" x1="1" y1="0" x2="0" y2="1">
+            <stop stop-color="#9b5e67"/>
+            <stop offset="100%" stop-color="#9c787a"/>
+        </linearGradient>
+        <linearGradient id="cl4" gradientUnits="objectBoundingBox" x1="1" y1="1" x2="0" y2="0">
+            <stop stop-color="#9c787a"/>
+            <stop offset="100%" stop-color="#817a94"/>
+        </linearGradient>
+        <linearGradient id="cl5" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="0" y2="0">
+            <stop stop-color="#817a94"/>
+            <stop offset="100%" stop-color="#498a98"/>
+        </linearGradient>
+        <linearGradient id="cl6" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+            <stop stop-color="#498a98"/>
+            <stop offset="100%" stop-color="#618099"/>
+        </linearGradient>
+        </defs>
+        </svg>
     </section>
     <!-- Work -->
-    <secion id="work" class="section">
-       <div class="section__container">
-        <h1>My work</h1>
-        <h3>Projects</h3>
-        <div class="work__categories">
-            <button class="category__btn selected" data-filter="*">All<span class="category__count">6</span></button>
-            <button class="category__btn" data-filter="HTML">HTML<span class="category__count">2</span></button>
-            <button class="category__btn" data-filter="CSS">CSS<span class="category__count">1</span></button>
-            <button class="category__btn" data-filter="JavaScript">JavaScript<span class="category__count">3</span></button>
-        </div>
-        <div class="work__projects">
-            <a 
-            href="https://github.com/CHOISEOKRYEOL/Portfolio" 
-            class="project"
-            target="blank"
-            data-type="JavaScript"
-            >
-            <img 
-            src="./imgs/projects/portfolio.png" 
-            alt="portfolio"
-            class="project__img">
-            <div class="project__description">
-                <h3>반응형 웹 포트폴리오 사이트</h3>
-                <span>Clone coding with Javascript</span>
-            </div>
+
+    <main id="paraCont">
+        <section id="section1" class="content__item">
+            <span class="content__item__num">01</span>
+            <h2 class="content__item__title">Section1</h2>
+                <figure class="content__item__imgWrap reveal">
+                    <a href="https://choiseokryeol.github.io/mega-box/">
+                        <div class="content__item__img"></div>
+                    </a>
+                </figure>
+            <p class="content__item__desc reveal" data-delay="500"><span>mega-box 반응형 웹 사이트</span></p>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2" class="content__item">
+            <span class="content__item__num">02</span>
+            <h2 class="content__item__title">Section2</h2>
+            <a href="">
+                <figure class="content__item__imgWrap reveal reveal-RTL">
+                    <a href="https://choiseokryeol.github.io/website-1/">
+                        <div class="content__item__img"></div>
+                    </a>
+                </figure>
             </a>
-            <a 
-            href="https://github.com/CHOISEOKRYEOL/project/tree/main/House" 
-            class="project"
-            target="blank"
-            data-type="JavaScript"
-            >
-            <img 
-            src="./imgs/projects/House.png" 
-            alt="House"
-            class="project__img">
-            <div class="project__description">
-                <h3>중개수수료 공유 사이트</h3>
-                <span>Clone coding with HTML and CSS</span>
-            </div>
+            <p class="content__item__desc reveal reveal-RTL" data-delay="500"><span>포트폴리오 반응형 웹 사이트</span></p>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3" class="content__item">
+            <span class="content__item__num">03</span>
+            <h2 class="content__item__title">Section3</h2>
+            <a href="">
+                <figure class="content__item__imgWrap reveal reveal-TTB">
+                    <a href="https://choiseokryeol.github.io/website-2/">
+                        <div class="content__item__img"></div>
+                    </a>
+                </figure>
             </a>
-            <a 
-            href="https://github.com/CHOISEOKRYEOL/project/tree/main/Shoppinglist" 
-            class="project"
-            target="blank"
-            data-type="CSS"
-            >
-            <img 
-            src="./imgs/projects/Shoppinglist.png" 
-            alt="shoppinglist"
-            class="project__img">
-            <div class="project__description">
-                <h3>Shoppinglist</h3>
-                <span>Clone coding with HTML and CSS JavaScript</span>
-            </div>
+            <p class="content__item__desc reveal reveal-TTB" data-delay="500"><span>3D를 이용한 포트폴리오 반응형 웹 사이트</span></p>
+        </section>
+        <!-- //section3 -->
+
+        <section id="section4" class="content__item">
+            <span class="content__item__num">04</span>
+            <h2 class="content__item__title">Section4</h2>
+            <a href="">
+                <figure class="content__item__imgWrap reveal reveal-BTT">
+                    <a href="https://choiseokryeol.github.io/Game/">
+                        <div class="content__item__img"></div>
+                    </a>
+                </figure>
             </a>
-            <a 
-            href="https://github.com/CHOISEOKRYEOL/project/tree/main/Shopping" 
-            class="project"
-            target="blank"
-            data-type="HTML"
-            >
-            <img 
-            src="./imgs/projects/Shopping.png" 
-            alt="shopping"
-            class="project__img">
-            <div class="project__description">
-                <h3>Shopping</h3>
-                <span>Clone coding with HTML and CSS and JavaScript</span>
-            </div>
-            </a>
-            <a 
-            href="https://github.com/CHOISEOKRYEOL/project/tree/main/Game" 
-            class="project"
-            target="blank"
-            data-type="JavaScript"
-            >
-            <img 
-            src="./imgs/projects/Game.png" 
-            alt="Game"
-            class="project__img">
-            <div class="project__description">
-                <h3>Game</h3>
-                <span>Clone coding with HTML and CSS and JavaScript</span>
-            </div>
-            </a>
-            <a 
-            href="https://github.com/CHOISEOKRYEOL/End" 
-            class="project"
-            target="blank"
-            data-type="HTML"
-            >
-            <img 
-            src="./imgs/projects/Shoppingpage.png" 
-            alt="page"
-            class="project__img">
-            <div class="project__description">
-                <h3>Page</h3>
-                <span>Clone coding with HTML and CSS</span>
-            </div>
-            </a>
-        </div>
-       </div>
-    </secion>
+            <p class="content__item__desc reveal reveal-BTT" data-delay="500"><span>모든지 기본을 중요하게 생각하고 행동한다.</span></p>
+        </section>
+        <!-- //section4 -->
+
+    </main>
+    
     <!-- Testimonials -->
-    <section id="testimonials" class="section">
+    <section id="testimonials" class="section none">
         <div class="section__container">
             <h1>Testimonials</h1>
             <h3>See what they say about me</h3>
@@ -302,7 +300,7 @@
         </div>
     </section>
     <!-- Contact -->
-    <section id="contact" class="section">
+    <section id="contact" class="section none">
         <h1 class="contact__title">Let's talk</h1>
         <h2 class="contact__email">zlshsktl@naver.com</h2>
         <div class="contact__links">
