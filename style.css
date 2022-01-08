@@ -55,7 +55,6 @@
 body {
     width: 100%;
 	height: 100vh;
-	background: rgba(0, 0, 0, 0.787);
     overflow-x: hidden;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -93,40 +92,39 @@ button {
 h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
-    color: var(--color-black);
+    color: var(--color-white);
     margin: 16px 0px;
 }
 
 h2 {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
-    color: var(--color-black);
+    color: var(--color-white);
     margin: 8px 0;
 }
 
 h3 {
     font-size: var(--font-regular);
     font-weight: var(--weight-regular);
-    color: var(--color-black);
+    color: var(--color-white);
     margin: 8px 0;
 }
 
 p {
     font-size: var(--font-regular);
     font-weight: var(--weight-regular);
-    color: var(--color-black);
+    color: var(--color-white);
     margin: 4px 0;
 }
 
 .mouse {
     position: absolute;
     width: 25px; height: 25px;
-    background: #444;
+    background: #222;
     border-radius: 50%;
-    z-index: 1000;
+    z-index: 500;
     user-select: none;
     pointer-events: none;
-    transform: scale(1);
     mix-blend-mode: difference;
     transition: transform 0.3s ease-in-out;
 }
@@ -209,7 +207,7 @@ p {
 
 /* Home */
 
-#home {
+#home{
     padding: 40px;
     padding-top: 120px;
     text-align: center;
@@ -245,7 +243,7 @@ p {
 
 .home__title,
 .home__description {
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .home__contact {
@@ -371,12 +369,15 @@ p {
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100,400);
 @keyframes load{0%{stroke-dashoffset:0}}
+
 .progress {
     position: relative;
     display: inline-block;
+    min-height: 15vw;
     padding: 0;
     text-align: center;
 }
+
     .progress > li {
         display: inline-block;
         position: relative;
@@ -390,7 +391,7 @@ p {
             content: attr(data-name);
             position: absolute;
             width: 100%;
-            bottom: -2rem;
+            bottom: -1rem;
             font-weight:400;
     }
     .progress > li::after {
@@ -426,7 +427,7 @@ p {
 .content__item {
     width: 50%;
     max-width: 70vw;
-    margin: 30vw 0;
+    margin: 10vw 0;
     /* background: rgba(255,255,255,0.3); */
     text-align: right;
     position: relative;
@@ -442,6 +443,7 @@ p {
     opacity: 0.07;
     position: absolute;
     right: -5vw; top: -10vw;
+    color: #fff;
 }
 .content__item:nth-child(even) .content__item__num {
     right: auto;
@@ -475,6 +477,7 @@ p {
     margin-right: -3vw;
     position: relative;
     z-index: 100;
+    color: #CBCCFF;
 }
 .content__item:nth-child(even) .content__item__desc {
     margin-right: 0;
@@ -584,50 +587,6 @@ p {
             100% {width: 100%; height: 0;    top: auto; bottom: 100%;}
         }
 
-/* Testimonial */
-
-#testimonials {
-    background-color: var(--color-light-white);
-}
-
-.testimonials {
-    margin: 40px;
-}
-
-.testimonial {
-    display: flex;
-    margin: 32px 0;
-}
-
-.testimonial__avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.testimonial__avatar:nth-child(odd) { /* 홀수일때 */
-    margin-right: 40px;
-}
-
-.testimonial__avatar:nth-child(even) { /* 짝수일때 */
-    margin-left: 40px;
-}
-
-.testimonial__speech-bubble {
-    width: 100%;
-    padding: 18px;
-    background-color: var(--color-white);
-    border-radius: var(--size-border-radius);
-}
-
-.testimonial__speech-bubble p {
-    color: var(--color-light-grey);
-}
-
-.testimonial__speech-bubble a {
-    color: var(--color-cyan);
-}
-
 /* Contact */
 
 .contact__links i {
@@ -661,26 +620,6 @@ p {
 }
 }
 
-/* Scroll */
-.arrow-up {
-    position: fixed;
-    bottom: 50px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    font-size: 35px;
-    color: var(--color-white);
-    background-color: var(--color-cyan);
-    border-radius: 50%;
-    opacity: 0;  /* diplay:none 같이 없어졌다가 나타나는것이면 애니메이션이 되지 않는다 */
-    pointer-events: none; /* 클릭이 안되게 지정할 수 있다(마우스를 올려놓으면 pointer 모양도 없앨 수 있다 */
-    transition: opacity var(--animation-duration) ease-in;
-}
-
-.arrow-up.visible {
-    opacity: 1;
-    pointer-events: auto; /* arrow-up button이 보일시 클릭 할 수 있게 한다 */
-}
 
 /* For below 768 screen width */
 @media screen and (max-width: 768px) {

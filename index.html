@@ -8,18 +8,21 @@
     <meta name="description" content="Portfolio for world-renowned software engineer Choi">
     <meta name="author" content="Choi">
     <link rel="icon" type="image/png" href="imgs/favicon-removebg-preview.png">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.5/tsparticles.min.js"></script>
     <script src="./main.js" async></script>
     
 </head>
 <body>
 
     <div class="mouse"></div>
+    <div id="tsparticles"></div>
     
     <!-- Navbar -->
-    <nav id="navbar">
+    <nav id="navbar" class="section">
         <div class="navbar__logo">
             <a href="#" class="none">SeokRyeol</a>
         </div>
@@ -29,7 +32,6 @@
                 <li class="navber__menu__item" data-link="#about">About</li>
                 <li class="navber__menu__item" data-link="#skills">Skills</li>
                 <li class="navber__menu__item" data-link="#work">My work</li>
-                <li class="navber__menu__item" data-link="#testimonials">Testimonial</li>
                 <li class="navber__menu__item" data-link="#contact">Contact</li>
             </ul>
         </div>
@@ -41,7 +43,7 @@
     </nav>
 
     <!-- Home -->
-    <section id="home">
+    <section id="home" class="section">
         <div class="home__container">
             <div class="home__container img">
                 <img 
@@ -59,7 +61,7 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="section__container none">
+    <section id="about" class="section none">
         <h1 class="main__title">About me</h1>
             <div class="major1">
                 <div class="major__icon">
@@ -79,15 +81,6 @@
                 </div>
                 <span class="major__title j">JavaScript</span>
             </div>
-        <div class="about__jobs none">
-            <div class="job">
-                <img src="./imgs/jobs/bitcamp.png" alt="bitcamp" class="jab__logo">
-                <div class="job_description">
-                <p class="job__name">Bitcamp</p>
-                <p class="job__period">2020-12-21 ~ 2021-06-04</p>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- Skills -->
     <section id="skills" class="section none">
@@ -221,7 +214,7 @@
     </section>
     <!-- Work -->
 
-    <main id="paraCont">
+    <main id="paraCont" class="section none">
         <section id="section1" class="content__item">
             <span class="content__item__num">01</span>
             <h2 class="content__item__title">Section1</h2>
@@ -275,51 +268,19 @@
             <p class="content__item__desc reveal reveal-BTT" data-delay="500"><span>모든지 기본을 중요하게 생각하고 행동한다.</span></p>
         </section>
         <!-- //section4 -->
-
     </main>
-    
-    <!-- Testimonials -->
-    <section id="testimonials" class="section none">
-        <div class="section__container">
-            <h1>Testimonials</h1>
-            <h3>See what they say about me</h3>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img 
-                    src="./imgs/jobs/bitcamp.png"
-                    alt="People" 
-                    class="testimonial__avatar">
-                    <div class="testimonial__speech-bubble">
-                        <p>
-                            먼거리임에도 불구하고 성실히 수업에 열정을 가지며 참여하였으며 </br> 끈기있게 맡은바 임무를 끝내려는 모습을 보임
-                        </p>
-                        <p class="name"><a href="https://github.com/CHOISEOKRYEOL">Choi</a> / Bitcamp</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- Contact -->
     <section id="contact" class="section none">
-        <h1 class="contact__title">Let's talk</h1>
-        <h2 class="contact__email">zlshsktl@naver.com</h2>
         <div class="contact__links">
             <a href="https://github.com/CHOISEOKRYEOL" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
             <a href="https://github.com/CHOISEOKRYEOL" target="_blank">
-                <i class="fab fa-linkedin"></i></i>
+                <i class="fab fa-linkedin"></i>
             </a>
         </div>
-        <p class="contact__rights">
-            2021 Dream Coding Choi - All rights reserved
-        </p>
     </section>
-
-    <!-- Arrow up -->
-    <button class="arrow-up">
-        <i class="fas fa-arrow-up"></i>
-    </button>
 
 </body>
 </html>

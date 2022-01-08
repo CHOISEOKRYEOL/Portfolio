@@ -54,7 +54,24 @@ img.addEventListener("click", () => {
         el.classList.remove("none");
     });
 });
+
+
     
+});
+
+window.addEventListener("scroll", () => {
+
+  let scrollTop = document.documentElement.scrollTop || window.scrollY;
+
+  document.querySelectorAll(".section").forEach((el, index) => {
+    if(scrollTop >= el.offsetTop) {
+      document.querySelectorAll(".navbar__box ul li").forEach(el => {
+        el.classList.remove("active");
+      });
+      document.querySelector(".navbar__box ul li:nth-child("+(index+1)+")").classList.add("active");
+    }
+  });
+  
 });
 
 const scrollReveal = function() {
@@ -110,55 +127,53 @@ gsap.to(".major3", {
 
 
 // 눈 내리기
-// tsParticles.load("tsparticles", {
-//   fpsLimit: 60,
-//   background: {
-//     color: "#000"
-//   },
-//   interactivity: {
-//     events: {
-//       onClick: { enable: true, mode: "push" },
-//       onHover: {
-//         enable: true,
-//         mode: "repulse"
-//       },
-//       resize: true
-//     },
-//     modes: {
-//       push: { quantity: 4 },
-//       repulse: { distance: 200, duration: 0.4 }
-//     }
-//   },
-//   particles: {
-//     color: { value: "#ffffff" },
-//     move: {
-//       bounce: false,
-//       direction: "none",
-//       enable: true,
-//       outModes: "out",
-//       random: false,
-//       speed: 2,
-//       straight: false
-//     },
-//     number: { density: { enable: true, area: 800 }, value: 80 },
-//     opacity: {
-//       value: 0.5
-//     },
-//     shape: {
-//       type: "star",
-//       options: {
-//         star: {
-//           sides: 5
-//         }
-//       }
-//     },
-//     size: {
-//       value: { min: 1, max: 5 }
-//     }
-//   }
-// });
-
-
+tsParticles.load("tsparticles", {
+  fpsLimit: 60,
+  background: {
+    color: "#000"
+  },
+  interactivity: {
+    events: {
+      onClick: { enable: true, mode: "push" },
+      onHover: {
+        enable: true,
+        mode: "repulse"
+      },
+      resize: true
+    },
+    modes: {
+      push: { quantity: 4 },
+      repulse: { distance: 200, duration: 0.4 }
+    }
+  },
+  particles: {
+    color: { value: "#fff" },
+    move: {
+      bounce: false,
+      direction: "none",
+      enable: true,
+      outModes: "out",
+      random: false,
+      speed: 3,
+      straight: false
+    },
+    number: { density: { enable: true, area: 800 }, value: 80 },
+    opacity: {
+      value: 0.5
+    },
+    shape: {
+      type: "star",
+      options: {
+        star: {
+          sides: 5
+        }
+      }
+    },
+    size: {
+      value: { min: 1, max: 5 }
+    }
+  }
+});
 
 // // Make navbar transparent when it is on the top
 // const navbar = document.querySelector('#navbar');
