@@ -53,25 +53,27 @@ img.addEventListener("click", () => {
     document.querySelectorAll(".none").forEach((el) => {
         el.classList.remove("none");
     });
+}); 
 });
 
-
-    
-});
-
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", (e) => {
 
   let scrollTop = document.documentElement.scrollTop || window.scrollY;
 
   document.querySelectorAll(".section").forEach((el, index) => {
-    if(scrollTop >= el.offsetTop) {
+    if(scrollTop >= el.offsetTop + scrollTop / 2.5) {
       document.querySelectorAll(".navbar__box ul li").forEach(el => {
         el.classList.remove("active");
       });
       document.querySelector(".navbar__box ul li:nth-child("+(index+1)+")").classList.add("active");
     }
+    if(window.scrollY === 0) {
+      document.querySelectorAll(".navbar__box ul li").forEach(el => {
+        el.classList.remove("active");
+      });
+      document.querySelector(".navber__menu__item").classList.add("active");
+    }
   });
-  
 });
 
 const scrollReveal = function() {

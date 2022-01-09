@@ -589,6 +589,10 @@ p {
 
 /* Contact */
 
+#contact {
+    margin-top: 100px;
+}
+
 .contact__links i {
     font-size: 8em;
     background-color: #18191f;
