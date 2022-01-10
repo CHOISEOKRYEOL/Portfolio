@@ -56,26 +56,39 @@ img.addEventListener("click", () => {
 }); 
 });
 
+// scroll 내리면 navbar 메뉴 활성화
 window.addEventListener("scroll", (e) => {
 
   let scrollTop = document.documentElement.scrollTop || window.scrollY;
 
   document.querySelectorAll(".section").forEach((el, index) => {
-    if(scrollTop >= el.offsetTop + scrollTop / 2.5) {
+    if(scrollTop >= el.offsetTop) {
       document.querySelectorAll(".navbar__box ul li").forEach(el => {
         el.classList.remove("active");
       });
       document.querySelector(".navbar__box ul li:nth-child("+(index+1)+")").classList.add("active");
     }
-    if(window.scrollY === 0) {
+    else if(window.scrollY === 0) {
       document.querySelectorAll(".navbar__box ul li").forEach(el => {
         el.classList.remove("active");
       });
-      document.querySelector(".navber__menu__item").classList.add("active");
+      document.querySelector(".navbar__box ul li").classList.add("active");
     }
   });
 });
 
+// navbar 클릭시 그 해당 창으로 이동
+document.querySelectorAll(".navbar__menu").forEach(el => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    let link = e.target.dataset.link;
+    document.querySelector(link).scrollIntoView({
+      behavior: "smooth"
+    })
+  });
+});
+
+// work 효과
 const scrollReveal = function() {
     let scrollTop = (window.pageYOffset || document.documentElement.scrollTop || window.scrollY) + window.innerHeight / 2;
     const reveal = document.querySelectorAll(".reveal");
@@ -177,6 +190,13 @@ tsParticles.load("tsparticles", {
   }
 });
 
+//  toggle 
+const navbarMenu = document.querySelector('.navbar__menu');
+const navbarToggleBtn = document.querySelector('.navbar__toggle__btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+
 // // Make navbar transparent when it is on the top
 // const navbar = document.querySelector('#navbar');
 // // getBoundingClientRect: DOMReact요소의 크기와 뷰포트에 상대적인 위치에 대한 정보를 제공하는 객체를 반환
@@ -206,12 +226,11 @@ tsParticles.load("tsparticles", {
 //     selectNavItem(target);
 // });
 
-// // Navbar toggle button for small screen
+// Navbar toggle button for small screen
 // const navbarToggleBtn = document.querySelector('.navbar__toggle__btn');
 // navbarToggleBtn.addEventListener('click', () => {
 //     navbarMenu.classList.toggle('open');
 // });
-
 
 // // Handle click on "contact me" button on home
 // const homeContactBtn = document.querySelector('.home__contact');
