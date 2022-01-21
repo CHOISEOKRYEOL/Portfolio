@@ -120,7 +120,7 @@ p {
 .mouse {
     position: absolute;
     width: 25px; height: 25px;
-    background: #222;
+    background: red;
     border-radius: 50%;
     z-index: 500;
     user-select: none;
@@ -320,19 +320,19 @@ p {
 
 .major__title.h {
     position: absolute;
-    left: 4.7%;
+    left: 4%;
     top: 73%;
 }
 
 .major__title.c {
     position: absolute;
-    left: 5.6%;
+    left: 4.7%;
     top: 73%;
 }
 
 .major__title.j {
     position: absolute;
-    left: 3.3%;
+    left: 2.7%;
     top: 73%;
 }
 
