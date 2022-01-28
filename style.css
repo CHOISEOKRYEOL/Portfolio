@@ -499,6 +499,9 @@ p {
 .content__item:nth-child(4) .content__item__img {
     background-image: url(./imgs/projects/gamejpg.jpg);
 }
+.content__item:nth-child(5) .content__item__img {
+    background-image: url(./imgs/projects/homeplus.jpg);
+}
 
 
 .reveal > a,
