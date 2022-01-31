@@ -49,11 +49,11 @@ window.addEventListener("mousemove", (e) => {
     });
 
     // 이미지 클릭 시 화면 나오기
-img.addEventListener("click", () => {
-    document.querySelectorAll(".none").forEach((el) => {
-        el.classList.remove("none");
-    });
-}); 
+// img.addEventListener("click", () => {
+//     document.querySelectorAll(".none").forEach((el) => {
+//         el.classList.remove("none");
+//     });
+// }); 
 });
 
 // scroll 내리면 navbar 메뉴 활성화
@@ -196,6 +196,14 @@ const navbarToggleBtn = document.querySelector('.navbar__toggle__btn');
 navbarToggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
 });
+
+// loding
+setTimeout(() => {
+  document.querySelectorAll(".none").forEach((el) => {
+    document.querySelector(".loading").classList.add("none");
+    el.classList.remove("none");
+  })
+}, 11000);
 
 // // Make navbar transparent when it is on the top
 // const navbar = document.querySelector('#navbar');

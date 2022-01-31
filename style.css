@@ -120,7 +120,7 @@ p {
 
 /* loding */
 
-.loading{
+.loading {
     text-transform:uppercase;
     font-family: 'Cabin Condensed', sans-serif;
     font-weight:bold;
@@ -135,6 +135,10 @@ p {
     top:200px;
     bottom:0;
     display:block;
+}
+
+.loading.none {
+    display: none;
 }
     
 @keyframes wave-animation{
@@ -522,7 +526,7 @@ p {
     margin-right: -3vw;
     position: relative;
     z-index: 100;
-    color: #CBCCFF;
+    color: #00C2AB;
 }
 .content__item:nth-child(even) .content__item__desc {
     margin-right: 0;
@@ -671,7 +675,6 @@ p {
         filter: hue-rotate(360deg);
 }
 }
-
 
 /* For below 768 screen width */
 @media screen and (max-width: 768px) {
