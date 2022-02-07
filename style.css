@@ -2,7 +2,6 @@
 
 
 :root {
-
     /* Color */
 
     --color-white: #ffffff;
@@ -535,11 +534,9 @@ p {
 
 .content__item:nth-child(1) .content__item__img {
     background-image: url(./imgs/projects/mega.jpg);
-    
 }
 .content__item:nth-child(2) .content__item__img {
     background-image: url(./imgs/projects/web1.jpg);
-    
 }
 .content__item:nth-child(3) .content__item__img {
     background-image: url(./imgs/projects/web2.jpg);
