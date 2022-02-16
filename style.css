@@ -542,9 +542,6 @@ p {
     background-image: url(./imgs/projects/web2.jpg);
 }
 .content__item:nth-child(4) .content__item__img {
-    background-image: url(./imgs/projects/gamejpg.jpg);
-}
-.content__item:nth-child(5) .content__item__img {
     background-image: url(./imgs/projects/homeplus.jpg);
 }
 
